@@ -2,6 +2,7 @@
   "name": "gha-aws-deploy-feature-branch",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://michaelfromyeg.github.io/gha-aws-deploy-feature-branch/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
