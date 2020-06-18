@@ -1,6 +1,6 @@
 # This will overwrite the currnet build with whatever was the latest push to feature
 
-name: Deployment
+name: Deploy Feature
 on:
   push:
     branches:

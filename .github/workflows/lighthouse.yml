@@ -1,13 +1,12 @@
-name: Lighthouse
+name: Run Lighthouse CI
 on: push
 jobs:
-  static-dist-dir:
+  lighthouse:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run Lighthouse against a static dist dir
+      - name: Run Lighthouse on urls and validate with lighthouserc
         uses: treosh/lighthouse-ci-action@v3
         with:
-          # no urls needed, since it uses local folder to scan .html files
-          configPath: './lighthouserc.json'
-          uploadArtifacts: true # save results as an action artifacts
+          urls: 'https://michaelfromyeg.github.io/gha-aws-deploy-feature-branch/'
+          configPath: '.github/workflows/lighthouserc.json'
