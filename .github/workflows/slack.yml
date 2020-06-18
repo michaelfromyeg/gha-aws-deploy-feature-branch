@@ -1,0 +1,16 @@
+name: Slack Notification
+on: push
+jobs:
+  slack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Slack notification
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: nwPlus
+        SLACK_CHANNEL: webhooks
+        SLACK_AVATAR: repository
+      uses: Ilshidur/action-slack@master
+      with:
+        args: 'More lettuce?'
