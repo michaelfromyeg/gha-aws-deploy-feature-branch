@@ -9,4 +9,5 @@ jobs:
         uses: treosh/lighthouse-ci-action@v3
         with:
           urls: 'https://michaelfromyeg.github.io/gha-aws-deploy-feature-branch/'
+          uploadArtifacts: true # save results as an action artifacts
           configPath: '.github/workflows/lighthouserc.json'
