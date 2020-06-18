@@ -12,12 +12,17 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
+  "hooks": {
+    "pre-commit": "npm lint",
+    "pre-push": "npm test"
+  },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint": "eslint --fix --ext js,jsx src",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.5"
   }
 }
