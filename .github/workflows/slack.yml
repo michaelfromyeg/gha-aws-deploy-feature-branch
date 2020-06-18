@@ -6,11 +6,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Slack notification
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_USERNAME: nwPlus
-        SLACK_CHANNEL: webhooks
-        SLACK_AVATAR: repository
-      uses: Ilshidur/action-slack@master
-      with:
-        args: 'More lettuce?'
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: ThisIsMyUsername # Optional. (defaults to webhook app)
+          SLACK_CHANNEL: general # Optional. (defaults to webhook)
+          SLACK_AVATAR: repository # Optional. can be (repository, sender, an URL) (defaults to webhook app avatar)
+        uses: Ilshidur/action-slack@master
+        with:
+          args: 'More lettuce?'
