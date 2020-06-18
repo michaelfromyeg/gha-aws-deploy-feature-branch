@@ -1,5 +1,5 @@
 name: Slack Notification
-on: push
+on: pull_request
 jobs:
   slack:
     runs-on: ubuntu-latest
