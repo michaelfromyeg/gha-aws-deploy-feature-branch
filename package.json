@@ -13,7 +13,7 @@
     "react-scripts": "3.4.1"
   },
   "hooks": {
-    "pre-commit": "npm lint",
+    "pre-commit": "yarn run lint",
     "pre-push": "npm test"
   },
   "scripts": {
