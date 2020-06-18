@@ -12,10 +12,6 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "hooks": {
-    "pre-commit": "yarn lint",
-    "pre-push": "yarn test --watchAll"
-  },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -25,6 +21,12 @@
     "test": "react-scripts test",
     "lint": "eslint --fix --ext js,jsx src",
     "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn test --watchAll"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
