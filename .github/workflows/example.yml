@@ -1,10 +1,10 @@
-# This will overwrite the currnet build with whatever was the latest push to releases
+# This will overwrite the currnet build with whatever was the latest push to feature
 
 name: Deployment
 on:
   push:
     branches:
-      - 'releases/**'
+      - 'feature/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest
